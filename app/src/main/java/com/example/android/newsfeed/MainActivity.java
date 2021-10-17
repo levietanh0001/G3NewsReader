@@ -112,9 +112,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    // Initialize the contents of the Activity's options menu
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the Options Menu we specified in XML
+        Log.i("OPTIONS", "initialize option menu with settings");
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
