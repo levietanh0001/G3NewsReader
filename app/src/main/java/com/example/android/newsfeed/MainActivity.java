@@ -35,6 +35,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -95,10 +97,8 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Handle navigation view item clicks here.
+        Log.i("FRAGMENTS", "switch between fragments on item click in nav drawer");
         int id = item.getItemId();
-
-        // Switch Fragments in a ViewPager on clicking items in Navigation Drawer
         if (id == R.id.nav_home) {
             viewPager.setCurrentItem(Constants.HOME);
         } else if (id == R.id.nav_world) {
@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_science) {
             viewPager.setCurrentItem(Constants.SCIENCE);
         }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
