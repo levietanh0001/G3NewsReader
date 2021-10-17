@@ -113,14 +113,14 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Log.i("OPTIONS", "initialize option menu with settings");
+        Log.i("OPTIONS MENU", "initialize options menu with settings");
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    // This method is called whenever an item in the options menu is selected.
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i("OPTIONS MENU", "an item in the options menu is selected!");
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             Intent settingsIntent = new Intent(this, SettingsActivity.class);
