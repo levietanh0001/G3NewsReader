@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
-        // Set gravity for tab bar
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         NavigationView navigationView = findViewById(R.id.nav_view);
