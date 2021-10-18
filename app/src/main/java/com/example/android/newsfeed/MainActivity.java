@@ -30,32 +30,28 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Log.i("DRAWER LAYOUT", "set drawer layout");
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        // Find the view pager that will allow the user to swipe between fragments
+        Log.i("VIEW PAGER", "get view pager view");
         viewPager = findViewById(R.id.viewpager);
-
-        // Give the TabLayout the ViewPager
+        Log.i("TAB LAYOUT", "set tab layout");
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
+        Log.i("NAVIGATION VIEW", "get navigation view");
         NavigationView navigationView = findViewById(R.id.nav_view);
         assert navigationView != null;
         navigationView.setNavigationItemSelectedListener(this);
-
-        // Set the default fragment when starting the app
+        Log.i("NAVIGATION VIEW", "set default fragment");
         onNavigationItemSelected(navigationView.getMenu().getItem(0).setChecked(true));
-
-        // Set category fragment pager adapter
+        Log.i("PAGER ADAPTER", "set pager adapter");
         CategoryFragmentPagerAdapter pagerAdapter =
                 new CategoryFragmentPagerAdapter(this, getSupportFragmentManager());
-        // Set the pager adapter onto the view pager
+        Log.i("PAGER ADAPTER", "set pager adapter onto the view pager");
         viewPager.setAdapter(pagerAdapter);
     }
 
