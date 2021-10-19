@@ -1,4 +1,5 @@
 # G3 NEWSREADER ANDROID APP 
+https://github.com/vietanh2000april/RacheNewsReader
 
 ## DESCRIPPTION
 
